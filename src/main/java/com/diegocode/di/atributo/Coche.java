@@ -14,25 +14,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class Coche {
 	
-	@Value("BMW")
+
 	private String marca;
 	
-	@Value("1981")
 	private Integer modelo;
-	
-	/*Dependency Injection by attribute*/
-	@Autowired
+
 	private Motor motor;
-	
-	public Coche() {
-	}
 	
 	/**
 	 * @param marca
 	 * @param modelo
 	 * @param motor
 	 */
-	public Coche(String marca, Integer modelo, Motor motor) {
+	@Autowired
+	public Coche(@Value("BMW")String marca, @Value("1981")Integer modelo, Motor motor) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.motor = motor;
