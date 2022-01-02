@@ -21,16 +21,8 @@ public class Coche {
 
 	private Motor motor;
 	
-	/**
-	 * @param marca
-	 * @param modelo
-	 * @param motor
-	 */
-	@Autowired
-	public Coche(@Value("BMW")String marca, @Value("1981")Integer modelo, Motor motor) {
-		this.marca = marca;
-		this.modelo = modelo;
-		this.motor = motor;
+	public Coche() {
+		
 	}
 
 	/**
@@ -43,6 +35,8 @@ public class Coche {
 	/**
 	 * @param marca the marca to set
 	 */
+	
+	@Value("BMW")
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
@@ -57,6 +51,7 @@ public class Coche {
 	/**
 	 * @param modelo the modelo to set
 	 */
+	 @Value("1981")
 	public void setModelo(Integer modelo) {
 		this.modelo = modelo;
 	}
@@ -71,6 +66,7 @@ public class Coche {
 	/**
 	 * @param motor the motor to set
 	 */
+	@Autowired
 	public void setMotor(Motor motor) {
 		this.motor = motor;
 	}

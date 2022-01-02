@@ -26,7 +26,9 @@ public class Motor {
 	 * @param marca
 	 * @param modelo
 	 */
-	public Motor(@Value("XL1")String marca, @Value("1990")Integer modelo) {
+	
+	
+	public Motor(String marca, Integer modelo) {
 		this.marca = marca;
 		this.modelo = modelo;
 	}
@@ -41,6 +43,7 @@ public class Motor {
 	/**
 	 * @param marca the marca to set
 	 */
+	@Value("XL1")
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
@@ -55,6 +58,7 @@ public class Motor {
 	/**
 	 * @param modelo the modelo to set
 	 */
+	@Value("1990")
 	public void setModelo(Integer modelo) {
 		this.modelo = modelo;
 	}
